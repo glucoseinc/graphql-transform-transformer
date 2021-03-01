@@ -1,4 +1,6 @@
 import {ObjectTypeDefinitionNode, DirectiveNode, InterfaceTypeDefinitionNode, FieldDefinitionNode, Kind} from 'graphql'
+import {printBlock, iff, forEach, not, raw, Expression, qref, ref} from 'graphql-mapping-template'
+import {ResolverResourceIDs, isNonNullType, isListType, unwrapNonNull} from 'graphql-transformer-common'
 import {
   Transformer,
   TransformerContext,
@@ -6,8 +8,6 @@ import {
   gql,
   getDirectiveArguments,
 } from 'graphql-transformer-core'
-import {ResolverResourceIDs, isNonNullType, isListType, unwrapNonNull} from 'graphql-transformer-common'
-import {printBlock, iff, forEach, not, raw, Expression, qref, ref} from 'graphql-mapping-template'
 
 export class TransformTransformer extends Transformer {
   constructor() {

@@ -1,6 +1,6 @@
+import {DynamoDBModelTransformer} from 'graphql-dynamodb-transformer'
 import {GraphQLTransform} from 'graphql-transformer-core'
 import {TransformTransformer} from '../TransformTransformer'
-import {DynamoDBModelTransformer} from 'graphql-dynamodb-transformer'
 
 test('@transform fails without @model.', () => {
   const validSchema = `
