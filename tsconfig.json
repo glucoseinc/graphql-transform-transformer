@@ -2,17 +2,13 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "commonjs",
-    "lib": [
-        "es2018"
-    ],
+    "lib": ["es2018"],
     "declaration": true,
     "sourceMap": true,
     "outDir": "./lib",
     "noImplicitAny": true,
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true
   },
-  "exclude": [
-    "lib",
-    "src/__tests__/**/*"
-  ]
+  "exclude": ["lib", "src/__tests__/**/*"]
 }
